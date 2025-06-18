@@ -1,0 +1,495 @@
+/*! tailwindcss v4.1.7 | MIT License | https://tailwindcss.com */
+@layer theme, base, components, utilities;
+@layer theme {
+  :root, :host {
+    --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+      "Courier New", monospace;
+    --default-font-family: var(--font-sans);
+    --default-mono-font-family: var(--font-mono);
+  }
+}
+@layer base {
+  *, ::after, ::before, ::backdrop, ::file-selector-button {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0 solid;
+  }
+  html, :host {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+    font-family: var(--default-font-family, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+    font-feature-settings: var(--default-font-feature-settings, normal);
+    font-variation-settings: var(--default-font-variation-settings, normal);
+    -webkit-tap-highlight-color: transparent;
+  }
+  hr {
+    height: 0;
+    color: inherit;
+    border-top-width: 1px;
+  }
+  abbr:where([title]) {
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+  a {
+    color: inherit;
+    -webkit-text-decoration: inherit;
+    text-decoration: inherit;
+  }
+  b, strong {
+    font-weight: bolder;
+  }
+  code, kbd, samp, pre {
+    font-family: var(--default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace);
+    font-feature-settings: var(--default-mono-font-feature-settings, normal);
+    font-variation-settings: var(--default-mono-font-variation-settings, normal);
+    font-size: 1em;
+  }
+  small {
+    font-size: 80%;
+  }
+  sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  sub {
+    bottom: -0.25em;
+  }
+  sup {
+    top: -0.5em;
+  }
+  table {
+    text-indent: 0;
+    border-color: inherit;
+    border-collapse: collapse;
+  }
+  :-moz-focusring {
+    outline: auto;
+  }
+  progress {
+    vertical-align: baseline;
+  }
+  summary {
+    display: list-item;
+  }
+  ol, ul, menu {
+    list-style: none;
+  }
+  img, svg, video, canvas, audio, iframe, embed, object {
+    display: block;
+    vertical-align: middle;
+  }
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+  button, input, select, optgroup, textarea, ::file-selector-button {
+    font: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    border-radius: 0;
+    background-color: transparent;
+    opacity: 1;
+  }
+  :where(select:is([multiple], [size])) optgroup {
+    font-weight: bolder;
+  }
+  :where(select:is([multiple], [size])) optgroup option {
+    padding-inline-start: 20px;
+  }
+  ::file-selector-button {
+    margin-inline-end: 4px;
+  }
+  ::placeholder {
+    opacity: 1;
+  }
+  @supports (not (-webkit-appearance: -apple-pay-button))  or (contain-intrinsic-size: 1px) {
+    ::placeholder {
+      color: currentcolor;
+      @supports (color: color-mix(in lab, red, red)) {
+        color: color-mix(in oklab, currentcolor 50%, transparent);
+      }
+    }
+  }
+  textarea {
+    resize: vertical;
+  }
+  ::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+  ::-webkit-date-and-time-value {
+    min-height: 1lh;
+    text-align: inherit;
+  }
+  ::-webkit-datetime-edit {
+    display: inline-flex;
+  }
+  ::-webkit-datetime-edit-fields-wrapper {
+    padding: 0;
+  }
+  ::-webkit-datetime-edit, ::-webkit-datetime-edit-year-field, ::-webkit-datetime-edit-month-field, ::-webkit-datetime-edit-day-field, ::-webkit-datetime-edit-hour-field, ::-webkit-datetime-edit-minute-field, ::-webkit-datetime-edit-second-field, ::-webkit-datetime-edit-millisecond-field, ::-webkit-datetime-edit-meridiem-field {
+    padding-block: 0;
+  }
+  :-moz-ui-invalid {
+    box-shadow: none;
+  }
+  button, input:where([type="button"], [type="reset"], [type="submit"]), ::file-selector-button {
+    appearance: button;
+  }
+  ::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+    height: auto;
+  }
+  [hidden]:where(:not([hidden="until-found"])) {
+    display: none !important;
+  }
+}
+@layer utilities;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+.roboto-sens {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+body {
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
+}
+header {
+  width: 100%;
+  height: 64px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 1px 0px 4px lightgray;
+}
+header img {
+  width: 150px;
+  margin-right: 39%;
+  position: relative;
+  animation: headerimg 2s 1;
+  transition: 2s ease;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 120px;
+  animation: headernav 2s 1;
+  position: relative;
+  transition: 2s ease;
+}
+header button {
+  margin: 10px;
+  border-radius: 7px;
+  width: 72px;
+  height: 32px;
+  border: 0.3px solid black;
+  background-color: white;
+  transition: 0.5s ease;
+}
+.bt1 {
+  border: 0.3px solid rgb(172, 170, 170);
+}
+.bt3 {
+  border: none;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bt2 {
+  color: white;
+  background-color: #c21760;
+  border: none;
+}
+.bt4 {
+  border: none;
+}
+header button:hover {
+  transform: scale(1.2);
+}
+@keyframes headernav {
+  0% {
+    left: 600px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+@keyframes headerimg {
+  0% {
+    right: 600px;
+  }
+  100% {
+    right: 0px;
+  }
+}
+.bt1:hover {
+  background-color: #c21760;
+  border: none;
+  color: #ffffff;
+  box-shadow: 1px 1px 3px gray;
+}
+.bt2:hover {
+  background-color: #ffffff;
+  color: black;
+  box-shadow: 1px 1px 3px gray;
+}
+.bt3:hover {
+  box-shadow: 1px 1px 3px gray;
+  border-radius: 60%;
+}
+.bt4:hover {
+  box-shadow: 1px 1px 3px gray;
+  border-radius: 60%;
+}
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+  padding: 0px 32px;
+}
+.hero1left {
+  margin-left: 80px;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  gap: 80px;
+}
+.hero1left h1 {
+  font-size: 35px;
+  font-weight: 850;
+  animation: hero1lefth1 2s 1;
+  position: relative;
+}
+.hero2 {
+  margin-right: -130px;
+  width: 50%;
+  height: 100%;
+}
+.hero2 img {
+  width: 100%;
+}
+.leftcenter {
+  height: 80PX;
+  width: 550px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 15px;
+  gap: 15px;
+  box-shadow: 2px 2px 10px grey;
+  border-radius: 12px;
+  animation: leftcenter 2s 1;
+  position: relative;
+}
+form {
+  width: 80%;
+  height: 48px;
+  display: flex;
+  border: 0.3px solid #ccc;
+  padding: 0px 10px;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+form input {
+  border: none;
+  width: 80%;
+}
+.mainbtn2 {
+  width: 95px;
+  height: 48px;
+  color: #ffff;
+  border: none;
+  border-radius: 8px;
+  background-color: #c21760;
+  font-size: 13px;
+  transition: 0.8s ease;
+}
+.mainbtn1 {
+  border: none;
+  color: #c21760;
+  background-color: transparent;
+  font-size: 13px;
+}
+.mainbtn2:hover {
+  background-color: transparent;
+  color: #c21760;
+  box-shadow: 1px 1px 3px gray;
+}
+@keyframes leftcenter {
+  0% {
+    right: 600px;
+  }
+  100% {
+    right: 0px;
+  }
+}
+@keyframes hero1lefth1 {
+  0% {
+    bottom: 800px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+.center1 {
+  font-size: 30px;
+  margin: 10px;
+  margin-bottom: 25px;
+}
+#center {
+  width: 100%;
+  height: 404px;
+  background: url(./image/center\ image.webp) no-repeat center;
+  background-size: cover;
+}
+.centerdiv {
+  width: 650px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 100px;
+  box-shadow: 2px 2px 6px gray;
+  padding: 15px;
+  border-radius: 10px;
+  position: relative;
+  bottom: 200px;
+  background-color: #ffff;
+  font-weight: 300;
+}
+.centerbtn {
+  width: 150px;
+  height: 43px;
+  color: #fff;
+  background-color: #c21760;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 1px 1px 3px gray;
+}
+.centerdiv h3 {
+  font-size: 25px;
+  color: #c21760;
+}
+.centerdiv p {
+  font-weight: 300;
+  font-size: 500;
+}
+.center2 {
+  margin-bottom: 40px;
+  margin-left: 100px;
+  font-size: 32px;
+  font-weight: 800;
+}
+#center2 {
+  width: 90%;
+  margin: 0px auto;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 20px;
+  position: relative;
+  animation: center2 3s 1;
+}
+#center2 div {
+  width: 100%;
+  height: 250px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 3px gray;
+  transition: 0.6s ease;
+}
+.karachi {
+  background: url(./centerimage/karachi.jpg) no-repeat center center;
+  background-size: cover;
+}
+.islamabad {
+  background: url(./centerimage/islamabad.jpg) no-repeat center;
+  background-size: cover;
+}
+.lahore {
+  background: url(./centerimage/lahore.jpg) no-repeat center;
+  background-size: cover;
+}
+.faisalabab {
+  background: url(./centerimage/faisalabad.jpg) no-repeat center;
+  background-size: cover;
+}
+.bahawalpur {
+  background: url(./centerimage/bahawalpur.jpg) no-repeat center;
+  background-size: cover;
+}
+.multan {
+  background: url(./centerimage/Multan.jpg) no-repeat bottom;
+  background-size: cover;
+}
+.larkana {
+  background: url(./centerimage/larkana.jpg) no-repeat center;
+  background-size: cover;
+}
+.gujrat {
+  background: url(./centerimage/Gujrat.jpg) no-repeat center;
+  background-size: cover;
+}
+.gugranwala {
+  background: url(./centerimage/Gurjranwala.jpg) no-repeat center;
+  background-size: cover;
+}
+.rawalpindi {
+  background: url(./centerimage/rawalpindi.jpg) no-repeat center;
+  background-size: cover;
+}
+.hyderabad {
+  background: url(./centerimage/hyderabad.jpg) no-repeat center;
+  background-size: cover;
+}
+.peshawar {
+  background: url(./centerimage/peshawar.jpg) no-repeat center;
+  background-size: cover;
+}
+.city {
+  background-color: #fff;
+  padding: 12px 23px;
+  position: relative;
+  top: 200px;
+  border-radius: 10px;
+  left: 5px;
+}
+#center2 div:hover {
+  transform: scale(1.1);
+}
+@keyframes center2 {
+  0% {
+    left: 110%;
+  }
+  100% {
+    left: 0%;
+  }
+}
