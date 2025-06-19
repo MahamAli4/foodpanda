@@ -16,76 +16,31 @@
     font-variation-settings:
       "wdth" 100;
   }
-body {
-    width: 100%;
-    height: auto;
-    overflow-x: hidden;
-}
+
 
 header {
-    width: 100%;
-    height: 64px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     box-shadow: 1px 0px 4px lightgray;
 
 }
 
-header img {
-    width: 150px;
-    margin-right: 39%;
-    position: relative;
-    animation: headerimg 2s 1;
-    transition: 2s ease;
+header h1 {
+    animation: headerimg 2s ease 1;
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 120px;
-    animation: headernav 2s 1;
-    position: relative;
-    transition: 2s ease;
+    animation: headernav 2s ease 1;
+
 }
 
 header button {
-    margin: 10px;
-    border-radius: 7px;
-    width: 72px;
-    height: 32px;
-    border: 0.3px solid black;
-    background-color: white;
     transition: 0.5s ease;
-
 }
 .bt1{
     border: 0.3px solid rgb(172, 170, 170);
 }
 
-.bt3 {
-    border: none;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.bt2 {
-    color: white;
-    background-color: #c21760;
-    border: none;
-}
-
-.bt4 {
-    border: none;
-
-
-}
-
 header button:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 @keyframes headernav {
@@ -111,66 +66,22 @@ header button:hover {
 }
 
 .bt1:hover {
-    background-color: #c21760;
-    border: none;
-    color: #ffffff;
     box-shadow: 1px 1px 3px gray;
 
 
 }
 
 .bt2:hover {
-    background-color: #ffffff;
-    color: black;
     box-shadow: 1px 1px 3px gray;
-
-
 }
+.hero1 h1{
+    animation:hero1lefth1 2s ease 1;
 
-.bt3:hover {
-    box-shadow: 1px 1px 3px gray;
-
-    border-radius: 60%;
-}
-
-.bt4:hover {
-    box-shadow: 1px 1px 3px gray;
-    border-radius: 60%;
-}
-
-.hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 500px;
-    padding: 0px 32px;
-}
-
-.hero1left {
-    margin-left: 80px;
-    width: 50%;
-    height: 100%;
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    gap: 80px;
-
-
-}
-.hero1left h1{
-    font-size: 35px;
-    font-weight: 850;
-    animation:hero1lefth1 2s 1;
-    position: relative;
 }
 
 .hero2 {
 
-    margin-right: -130px;
-    width: 50%;
-    height: 100%;
+    margin-right: -140px;
 }
 
 .hero2 img {
@@ -178,58 +89,23 @@ header button:hover {
 }
 
 .leftcenter {
-    height: 80PX;
-    width: 550px;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 4px 15px;
-    gap: 15px;
     box-shadow: 2px 2px 10px grey;
-    border-radius: 12px;
-    animation: leftcenter 2s 1;
-    position: relative;
+    animation: leftcenter 2s ease 1;
 
 
 }
 
 form {
-    width: 80%;
-    height: 48px;
-    display: flex;
     border: 0.3px solid #ccc;
-    padding: 0px 10px;
-    justify-content: space-between;
-    border-radius: 10px;
-
-}
-
-form input {
-    border: none;
-    width: 80%;
 }
 
 .mainbtn2 {
-    width: 95px;
-    height: 48px;
-    color: #ffff;
-    border: none;
-    border-radius: 8px;
-    background-color: #c21760;
-    font-size: 13px;
+ 
     transition: 0.8s ease;
 }
 
-.mainbtn1 {
-    border: none;
-    color: #c21760;
-    background-color: transparent;
-    font-size: 13px;
-}
 .mainbtn2:hover{
-    background-color: transparent;
-    color: #c21760;
+
     box-shadow: 1px 1px 3px gray;
 }
 @keyframes leftcenter {
@@ -242,11 +118,7 @@ form input {
     100%{bottom: 0px;}
     
 }
-.center1{
-    font-size: 30px;
-    margin: 10px;
-    margin-bottom: 25px;
-}
+
 #center{
     width: 100%;
     height: 404px;
@@ -255,19 +127,7 @@ form input {
 
 }
 .centerdiv{
-    width: 650px;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin-left: 100px;
     box-shadow: 2px 2px 6px gray;
-    padding: 15px;
-    border-radius: 10px;
-    position: relative;
-    bottom: 300px;
-    background-color: #ffff;
-    font-weight: 300;
 }
 .centerbtn{
     width: 150px;

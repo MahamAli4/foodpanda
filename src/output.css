@@ -1,4 +1,5 @@
-/*! tailwindcss v4.1.7 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v4.1.8 | MIT License | https://tailwindcss.com */
+@layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -6,6 +7,10 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --spacing: 0.25rem;
+    --text-4xl: 2.25rem;
+    --text-4xl--line-height: calc(2.5 / 2.25);
+    --font-weight-extrabold: 800;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -155,7 +160,85 @@
     display: none !important;
   }
 }
-@layer utilities;
+@layer utilities {
+  .relative {
+    position: relative;
+  }
+  .mr-64 {
+    margin-right: calc(var(--spacing) * 64);
+  }
+  .mr-\[-130px\] {
+    margin-right: -130px;
+  }
+  .ml-3 {
+    margin-left: calc(var(--spacing) * 3);
+  }
+  .ml-20 {
+    margin-left: calc(var(--spacing) * 20);
+  }
+  .flex {
+    display: flex;
+  }
+  .h-16 {
+    height: calc(var(--spacing) * 16);
+  }
+  .h-\[500px\] {
+    height: 500px;
+  }
+  .h-auto {
+    height: auto;
+  }
+  .h-full {
+    height: 100%;
+  }
+  .w-1\/2 {
+    width: calc(1/2 * 100%);
+  }
+  .w-40 {
+    width: calc(var(--spacing) * 40);
+  }
+  .w-full {
+    width: 100%;
+  }
+  .flex-col {
+    flex-direction: column;
+  }
+  .items-center {
+    align-items: center;
+  }
+  .justify-around {
+    justify-content: space-around;
+  }
+  .justify-between {
+    justify-content: space-between;
+  }
+  .justify-center {
+    justify-content: center;
+  }
+  .gap-20 {
+    gap: calc(var(--spacing) * 20);
+  }
+  .overflow-x-hidden {
+    overflow-x: hidden;
+  }
+  .px-8 {
+    padding-inline: calc(var(--spacing) * 8);
+  }
+  .px-9 {
+    padding-inline: calc(var(--spacing) * 9);
+  }
+  .pl-40 {
+    padding-left: calc(var(--spacing) * 40);
+  }
+  .text-4xl {
+    font-size: var(--text-4xl);
+    line-height: var(--tw-leading, var(--text-4xl--line-height));
+  }
+  .font-extrabold {
+    --tw-font-weight: var(--font-weight-extrabold);
+    font-weight: var(--font-weight-extrabold);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -170,34 +253,14 @@
   font-style: normal;
   font-variation-settings: "wdth" 100;
 }
-body {
-  width: 100%;
-  height: auto;
-  overflow-x: hidden;
-}
 header {
-  width: 100%;
-  height: 64px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   box-shadow: 1px 0px 4px lightgray;
 }
-header img {
-  width: 150px;
-  margin-right: 39%;
-  position: relative;
-  animation: headerimg 2s 1;
-  transition: 2s ease;
+header h1 {
+  animation: headerimg 2s ease 1;
 }
 nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-left: 120px;
-  animation: headernav 2s 1;
-  position: relative;
-  transition: 2s ease;
+  animation: headernav 2s ease 1;
 }
 header button {
   margin: 10px;
@@ -256,42 +319,8 @@ header button:hover {
   color: black;
   box-shadow: 1px 1px 3px gray;
 }
-.bt3:hover {
-  box-shadow: 1px 1px 3px gray;
-  border-radius: 60%;
-}
-.bt4:hover {
-  box-shadow: 1px 1px 3px gray;
-  border-radius: 60%;
-}
-.hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 500px;
-  padding: 0px 32px;
-}
-.hero1left {
-  margin-left: 80px;
-  width: 50%;
-  height: 100%;
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  justify-content: center;
-  gap: 80px;
-}
 .hero1left h1 {
-  font-size: 35px;
-  font-weight: 850;
-  animation: hero1lefth1 2s 1;
-  position: relative;
-}
-.hero2 {
-  margin-right: -130px;
-  width: 50%;
-  height: 100%;
+  animation: hero1lefth1 2s ease 1;
 }
 .hero2 img {
   width: 100%;
@@ -368,7 +397,7 @@ form input {
 #center {
   width: 100%;
   height: 404px;
-  background: url(./image/center\ image.webp) no-repeat center;
+  background: url(../image/center-image.webp) no-repeat center;
   background-size: cover;
 }
 .centerdiv {
@@ -382,7 +411,7 @@ form input {
   padding: 15px;
   border-radius: 10px;
   position: relative;
-  bottom: 200px;
+  bottom: 300px;
   background-color: #ffff;
   font-weight: 300;
 }
@@ -427,51 +456,51 @@ form input {
   transition: 0.6s ease;
 }
 .karachi {
-  background: url(./centerimage/karachi.jpg) no-repeat center center;
+  background: url(../center-images/karachi.jpg) no-repeat center center;
   background-size: cover;
 }
 .islamabad {
-  background: url(./centerimage/islamabad.jpg) no-repeat center;
+  background: url(../center-images/islamabad.jpg) no-repeat center;
   background-size: cover;
 }
 .lahore {
-  background: url(./centerimage/lahore.jpg) no-repeat center;
+  background: url(../center-images/lahore.jpg) no-repeat center;
   background-size: cover;
 }
-.faisalabab {
-  background: url(./centerimage/faisalabad.jpg) no-repeat center;
+.faisalabad {
+  background: url(../center-images/faislabad.jpg) no-repeat center;
   background-size: cover;
 }
 .bahawalpur {
-  background: url(./centerimage/bahawalpur.jpg) no-repeat center;
+  background: url(../center-images/bahawalpur.jpg) no-repeat center;
   background-size: cover;
 }
 .multan {
-  background: url(./centerimage/Multan.jpg) no-repeat bottom;
+  background: url(../center-images/Multan.jpg) no-repeat bottom;
   background-size: cover;
 }
 .larkana {
-  background: url(./centerimage/larkana.jpg) no-repeat center;
+  background: url(../center-images/larkana.jpg) no-repeat center;
   background-size: cover;
 }
 .gujrat {
-  background: url(./centerimage/Gujrat.jpg) no-repeat center;
+  background: url(../center-images/Gujrat.jfif) no-repeat center;
   background-size: cover;
 }
 .gugranwala {
-  background: url(./centerimage/Gurjranwala.jpg) no-repeat center;
+  background: url(../center-images/Gujranwala.jpg) no-repeat center;
   background-size: cover;
 }
 .rawalpindi {
-  background: url(./centerimage/rawalpindi.jpg) no-repeat center;
+  background: url(../center-images/rawalpindi.jfif) no-repeat center;
   background-size: cover;
 }
 .hyderabad {
-  background: url(./centerimage/hyderabad.jpg) no-repeat center;
+  background: url(../center-images/hyderabad.jpg) no-repeat center;
   background-size: cover;
 }
 .peshawar {
-  background: url(./centerimage/peshawar.jpg) no-repeat center;
+  background: url(../center-images/peshawar.jpg) no-repeat center;
   background-size: cover;
 }
 .city {
@@ -491,5 +520,16 @@ form input {
   }
   100% {
     left: 0%;
+  }
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-font-weight: initial;
+    }
   }
 }
